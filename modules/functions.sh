@@ -27,6 +27,14 @@ function __get_version_file {
     echo "$ROOT_DIR/$VERSION_FILE"
 }
 
+function __get_t3_version_file {
+    if [ -z "$T3_VERSION_FILE" ]; then
+        T3_VERSION_FILE="ext_emconf.php"
+    fi
+
+    echo "$ROOT_DIR/$T3_VERSION_FILE"
+}
+
 function __get_hotfix_version_bumplevel {
     if [ -z "$VERSION_BUMPLEVEL_HOTFIX" ]; then
         VERSION_BUMPLEVEL_HOTFIX="PATCH"
